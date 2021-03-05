@@ -24,6 +24,8 @@ COLOR_APP_IMAGE="${ECR_IMAGE_PREFIX}/${APP}"
 MANIFEST_VERSION="${1:-v1beta2}"
 AWS_CLI_VERSION=$(aws --version 2>&1 | cut -d/ -f2 | cut -d. -f1)
 
+ENVOY_IMAGE="840364872350.dkr.ecr.us-west-2.amazonaws.com/aws-appmesh-envoy:v1.16.1.0-prod"
+
 error() {
     echo $1
     exit 1
